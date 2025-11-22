@@ -44,7 +44,7 @@ const Header = ({ children, className }: HeaderProps) => {
   return (
     <div
       className={twMerge(
-        `bg-gradient-to-b from-slate-700 p-6 rounded-lg h-fit`,
+        `bg-gradient-to-b from-pink-900/80 p-6 rounded-lg h-fit`,
         className,
       )}
     >

@@ -84,7 +84,7 @@ const PlayerModal = ({
         <Content
           className='fixed md:hidden drop-shadow-md border border-neutral-700 top-[50%]
           left-[50%] max-h-full h-full w-full translate-x-[-50%] translate-y-[-50%] 
-          rounded-md bg-slate-900 p-[25px] focus:outline-none'
+          rounded-md bg-pink-950 p-[25px] focus:outline-none'
         >
           <div className='flex flex-col gap-y-4 w-full h-full p-2 justify-between'>
             <div className='flex flex-row justify-between'>
