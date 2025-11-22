@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import getSongs from '@/actions/getSongs';
 
 import Header from '@/components/Header';
@@ -17,7 +18,17 @@ const Home = async () => {
     >
       <Header>
         <div className='mb-2'>
-          <Welcome />
+          <div className='flex items-center gap-4 mb-4'>
+            <div className='relative h-16 w-16 md:h-20 md:w-20'>
+              <Image
+                src='/images/punjabi-beats-logo.png'
+                alt='Punjabi Beats Logo'
+                fill
+                className='object-contain'
+              />
+            </div>
+            <Welcome />
+          </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 mt-4'>
             <ListItem
               image='/images/liked.png'

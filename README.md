@@ -1,8 +1,8 @@
-# Spotify Clone App (Next.js)
+# Punjabi Beats
 
 ## Introduction
 
-This is a Spotify clone app created using Next.js, a React framework for server-side rendering and building modern web applications. The app replicates the core functionalities of Spotify, allowing users to discover, search, and play music. All songs and associated artwork are stored using Supabase, a backend-as-a-service (BaaS) platform. All songs are free to play - no subscriptions required!
+Punjabi Beats is a music streaming app created using Next.js, a React framework for server-side rendering and building modern web applications. The app allows users to discover, search, and play music. All songs and associated artwork are stored using Supabase, a backend-as-a-service (BaaS) platform. All songs are free to play - no subscriptions required!
 
 ## Features
 
@@ -36,9 +36,12 @@ This is a Spotify clone app created using Next.js, a React framework for server-
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
+## Author
+
+**Samreet**
+
 ## Contact
 
-If you have any questions or suggestions, please feel free to reach out to me:
+If you have any questions or suggestions, please feel free to reach out:
 
-- Email: kpirabaharan3@gmail.com
-- LinkedIn: [https://linkedin.com/in/kpirabaharan/](https://linkedin.com/in/kpirabaharan/)
+- Author: Samreet

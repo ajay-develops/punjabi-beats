@@ -15,8 +15,12 @@ import Player from '@/components/Player';
 const font = Figtree({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Spotify Clone',
+  title: 'Punjabi Beats',
   description: 'Listen to Music',
+  icons: {
+    icon: '/images/punjabi-beats-logo.png',
+    apple: '/images/punjabi-beats-logo.png',
+  },
 };
 
 export const revalidate = 0;

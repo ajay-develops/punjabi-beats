@@ -4,7 +4,7 @@
 
 1. **Go to your Supabase Dashboard**
    - Visit: https://app.supabase.com
-   - Select your project: `spotify-clone` (or your project name)
+   - Select your project: `punjabi-beats` (or your project name)
 
 2. **Navigate to Authentication Settings**
    - Click on **"Authentication"** in the left sidebar

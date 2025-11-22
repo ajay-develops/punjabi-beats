@@ -1,7 +1,8 @@
 {
-  "name": "spotify-clone",
+  "name": "punjabi-beats",
   "version": "0.1.0",
   "private": true,
+  "author": "Samreet",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
