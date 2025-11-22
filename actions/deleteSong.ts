@@ -50,8 +50,9 @@ const deleteSong = async (songId: string): Promise<DeleteSongResult> => {
     }
 
     // Get the song to find file paths using GraphQL
+    // Pass songId as number - GraphQL BigInt scalar accepts numbers (not BigInt objects)
     const songData = await executeQuery(GET_SONG_BY_ID, {
-      id: BigInt(parseInt(songId, 10)),
+      id: parseInt(songId, 10),
     });
 
     const song = songData?.songsCollection?.edges?.[0]?.node;
@@ -82,8 +83,9 @@ const deleteSong = async (songId: string): Promise<DeleteSongResult> => {
     await Promise.allSettled(deletePromises);
 
     // Delete the song from database using GraphQL mutation
+    // Pass songId as number - GraphQL BigInt scalar accepts numbers (not BigInt objects)
     await executeMutation(DELETE_SONG, {
-      id: BigInt(parseInt(songId, 10)),
+      id: parseInt(songId, 10),
     });
 
     return {
@@ -91,9 +93,11 @@ const deleteSong = async (songId: string): Promise<DeleteSongResult> => {
     };
   } catch (error: any) {
     console.error('Delete song error:', error);
+    // Ensure error message is serializable (convert any BigInt to string)
+    const errorMessage = error?.message || 'Failed to delete song';
     return {
       success: false,
-      error: error.message || 'Failed to delete song',
+      error: typeof errorMessage === 'string' ? errorMessage : String(errorMessage),
     };
   }
 };

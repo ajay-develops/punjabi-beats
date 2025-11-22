@@ -1,6 +1,6 @@
 # Get all liked songs for current user with song details
 query GetLikedSongs($userId: UUID!) {
-  likedSongsCollection(
+  liked_songsCollection(
     filter: { user_id: { eq: $userId } }
     orderBy: [{ created_at: DescNullsLast }]
   ) {
@@ -25,7 +25,7 @@ query GetLikedSongs($userId: UUID!) {
 
 # Check if a song is liked by user
 query CheckSongLiked($userId: UUID!, $songId: BigInt!) {
-  likedSongsCollection(
+  liked_songsCollection(
     filter: { user_id: { eq: $userId }, song_id: { eq: $songId } }
     first: 1
   ) {

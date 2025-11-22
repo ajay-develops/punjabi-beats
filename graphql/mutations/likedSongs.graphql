@@ -1,6 +1,6 @@
 # Like a song (insert into liked_songs)
 mutation InsertLikedSong($userId: UUID!, $songId: BigInt!) {
-  insertIntolikedSongsCollection(
+  insertIntoliked_songsCollection(
     objects: [{ user_id: $userId, song_id: $songId }]
   ) {
     records {
@@ -13,7 +13,7 @@ mutation InsertLikedSong($userId: UUID!, $songId: BigInt!) {
 
 # Unlike a song (delete from liked_songs)
 mutation DeleteLikedSong($userId: UUID!, $songId: BigInt!) {
-  deleteFromlikedSongsCollection(
+  deleteFromliked_songsCollection(
     filter: { user_id: { eq: $userId }, song_id: { eq: $songId } }
   ) {
     records {

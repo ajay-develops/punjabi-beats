@@ -109,16 +109,16 @@ export const convertSongsCollectionToSongs = (
 };
 
 /**
- * Convert GraphQL likedSongsCollection response to Song[] format
+ * Convert GraphQL liked_songsCollection response to Song[] format
  */
 export const convertLikedSongsCollectionToSongs = (
   data: any,
 ): Song[] => {
-  if (!data?.likedSongsCollection?.edges) {
+  if (!data?.liked_songsCollection?.edges) {
     return [];
   }
 
-  return data.likedSongsCollection.edges
+  return data.liked_songsCollection.edges
     .map((edge: any) => edge.node.songs)
     .filter((song: any) => song !== null)
     .map((song: any) => ({

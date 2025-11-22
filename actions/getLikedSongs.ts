@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 
 const GET_LIKED_SONGS = gql`
   query GetLikedSongs($userId: UUID!) {
-    likedSongsCollection(
+    liked_songsCollection(
       filter: { user_id: { eq: $userId } }
       orderBy: [{ created_at: DescNullsLast }]
     ) {

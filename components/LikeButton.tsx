@@ -17,7 +17,7 @@ interface LikeButtonProps {
 
 const CHECK_SONG_LIKED = gql`
   query CheckSongLiked($userId: UUID!, $songId: BigInt!) {
-    likedSongsCollection(
+    liked_songsCollection(
       filter: { user_id: { eq: $userId }, song_id: { eq: $songId } }
       first: 1
     ) {
@@ -33,7 +33,7 @@ const CHECK_SONG_LIKED = gql`
 
 const INSERT_LIKED_SONG = gql`
   mutation InsertLikedSong($userId: UUID!, $songId: BigInt!) {
-    insertIntolikedSongsCollection(
+    insertIntoliked_songsCollection(
       objects: [{ user_id: $userId, song_id: $songId }]
     ) {
       records {
@@ -47,7 +47,7 @@ const INSERT_LIKED_SONG = gql`
 
 const DELETE_LIKED_SONG = gql`
   mutation DeleteLikedSong($userId: UUID!, $songId: BigInt!) {
-    deleteFromlikedSongsCollection(
+    deleteFromliked_songsCollection(
       filter: { user_id: { eq: $userId }, song_id: { eq: $songId } }
     ) {
       records {
@@ -76,7 +76,7 @@ const LikeButton = ({ songId, iconSize = 25 }: LikeButtonProps) => {
     pause: !user?.id,
   });
 
-  const isLiked = checkLikedResult.data?.likedSongsCollection?.edges?.length > 0;
+  const isLiked = checkLikedResult.data?.liked_songsCollection?.edges?.length > 0;
 
   const Icon = isLiked ? AiFillHeart : AiOutlineHeart;
 
@@ -117,7 +117,7 @@ const LikeButton = ({ songId, iconSize = 25 }: LikeButtonProps) => {
 
   return (
     <button className='hover:opacity-75 transition' onClick={handleLike}>
-      <Icon color={isLiked ? '#303d4f' : 'white'} size={iconSize} />
+      <Icon color={isLiked ? '#ec4899' : 'white'} size={iconSize} />
     </button>
   );
 };
