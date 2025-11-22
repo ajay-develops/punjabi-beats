@@ -4,6 +4,8 @@ import { PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { usePathname } from 'next/navigation';
 import { useMemo } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 
@@ -48,6 +50,18 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
       )}
     >
       <div className='hidden md:flex flex-col gap-y-2 bg-black h-full w-[300px] p-2'>
+      <Box>
+        <Link href='/' className='px-5 pt-4 pb-2'>
+          <div className='relative h-36 w-full'>
+            <Image
+              src='/images/punjabi-beats-logo.png'
+              alt='Punjabi Beats Logo'
+              fill
+              className='object-contain'
+            />
+          </div>
+        </Link>
+        </Box>
         <Box>
           <div className='flex flex-col gap-y-4 px-5 py-4'>
             {routes.map((item) => (
